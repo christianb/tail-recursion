@@ -43,3 +43,6 @@ fac 4 = go 4 1
       = 24
 ```
 Now its much more memory efficient. Every recursion step is just a call to a function with two inputs.
+
+## Links
+* [Tail Recursion Explained](https://www.youtube.com/watch?v=_JtPhF8MshA)
