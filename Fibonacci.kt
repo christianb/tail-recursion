@@ -11,6 +11,14 @@ fun fibTailRecursion(n: Long): BigInteger = go(n, BigInteger.ZERO, BigInteger.ON
 
 /**
  * Using the keyword tailrec let the compiler rewrite the recursive code into imperative code to avoid stack overflow.
+ * @param [a] current Fibonacci number.
+ * @param [b] next Fibonnaci number.
+ *
+ * fib 4 = go 4 (0,1)
+ *       = go 3 (1,1)
+ *       = go 2 (1,2)
+ *       = go 1 (2,3)
+ *       = 3
  */
 private tailrec fun go(n: Long, a: BigInteger, b: BigInteger): BigInteger {
     if (n <= 0) return a
