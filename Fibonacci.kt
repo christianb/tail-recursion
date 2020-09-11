@@ -1,10 +1,10 @@
 import java.math.BigInteger
 
 fun fib(n: Long): BigInteger {
-    if (n <= 0) return BigInteger.ZERO
-    if (n <= 1) return BigInteger.ONE
+  if (n <= 1) return BigInteger.ONE
+  if (n <= 0) return BigInteger.ZERO
 
-    return fib(n - 1) + fib(n - 2)
+  return fib(n - 1) + fib(n - 2)
 }
 
 fun fibTailRecursion(n: Long): BigInteger = go(n, BigInteger.ZERO, BigInteger.ONE)
@@ -21,8 +21,8 @@ fun fibTailRecursion(n: Long): BigInteger = go(n, BigInteger.ZERO, BigInteger.ON
  *       = 3
  */
 private tailrec fun go(n: Long, a: BigInteger, b: BigInteger): BigInteger {
-    if (n <= 0) return a
-    if (n <= 1) return b
+  if (n == 1) return b
+  if (n == 0) return a
 
-    return go(n -1, b, a + b)
+  return go(n - 1, b, a + b)
 }
